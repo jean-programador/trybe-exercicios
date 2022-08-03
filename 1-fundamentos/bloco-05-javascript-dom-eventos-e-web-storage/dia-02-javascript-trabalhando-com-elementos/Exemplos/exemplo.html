@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #pai {
+            border: 1px solid black;
+        }
+        #elementoOndeVoceEsta {
+            border: 1px solid blue;
+        }
+        #primeiroFilhoDoFilho {
+            border: 1px solid yellowgreen;
+        }
+    </style>
+</head>
+<body>
+    <main id="paiDoPai">
+        <section id="pai">
+          <section id="primeiroFilho"> primeiroFilho</section>
+          <section id="elementoOndeVoceEsta"> Elemento Here
+            <section id="primeiroFilhoDoFilho"></section>
+            <section id="segundoEUltimoFilhoDoFilho">segundoEUltimoFilhoDoFilho</section>
+          </section>
+          Atenção!
+          <section id="terceiroFilho">terceiroFilho</section>
+          <section id="quartoEUltimoFilho">quartoEUltimoFilho</section>
+        </section>
+      </main>
+      <script>
+
+//Parte 1 - Buscando Elementos
+// Acesse o elemento elementoOndeVoceEsta.
+document.getElementById('elementoOndeVoceEsta');
+// Acesse pai a partir de elementoOndeVoceEsta e adicione uma color a ele.
+document.getElementById('elementoOndeVoceEsta').parentNode.style.color = 'red';
+// Acesse o primeiroFilhoDoFilho e adicione um texto a ele. Você se lembra dos vídeos da aula anterior, como fazer isso?
+document.getElementById('elementoOndeVoceEsta').firstElementChild.innerHTML = 'primeiroFilhoDoFilho';
+// Acesse o primeiroFilho a partir de pai.
+document.getElementById('pai').firstElementChild;
+// Agora acesse o primeiroFilho a partir de elementoOndeVoceEsta.
+document.getElementById('elementoOndeVoceEsta').previousElementSibling;
+// Agora acesse o texto Atenção! a partir de elementoOndeVoceEsta.
+document.getElementById('elementoOndeVoceEsta').nextSibling;
+// Agora acesse o terceiroFilho a partir de elementoOndeVoceEsta.
+document.getElementById('elementoOndeVoceEsta').nextElementSibling;
+// Agora acesse o terceiroFilho a partir de pai.
+document.getElementById('pai').children[2];
+
+//Parte 2 - Criando Elementos
+// Crie um irmão para elementoOndeVoceEsta.
+    let father = document.getElementById('pai');
+    let brother = document.createElement('section');
+    father.appendChild(brother);
+    document.getElementsByTagName('section')[7].id = 'brother';
+    document.getElementById('brother').innerText = 'ESTE É O IRMÃO DO elementoOndeVoceEsta';
+// Crie um filho para elementoOndeVoceEsta.
+    let fatherTwo = document.getElementById('elementoOndeVoceEsta');
+    let son = document.createElement('section');
+    fatherTwo.appendChild(son);
+    document.getElementsByTagName('section')[5].id = 'terceiroFilhoDoFilho';
+    document.getElementById('terceiroFilhoDoFilho').innerText = 'ESTE É O FILHO DO elementoOndeVoceEsta';
+// Crie um filho para primeiroFilhoDoFilho.
+    let fatherTree = document.getElementById('primeiroFilhoDoFilho');
+    let child = document.createElement('section');
+    fatherTree.appendChild(child);
+    let childId = document.getElementById('primeiroFilhoDoFilho').firstElementChild;
+    childId.id = 'filhoDofilhoDofilho'
+    childId.innerText = "Hello I Am o FILHO DO FILHO DO FILHO"
+// A partir desse filho criado, acesse terceiroFilho.
+    document.getElementById('filhoDofilhoDofilho').parentNode.parentNode.nextElementSibling;
+
+// Parte 3 - Removendo Elementos
+// Remova todos os elementos filhos de paiDoPai exceto pai, elementoOndeVoceEsta e primeiroFilhoDoFilho.
+    const removeElement = () => {
+    const childs = document.querySelectorAll('#paiDoPai section');
+        for (let index = 0; index < childs.length; index += 1) {
+        let element = childs[index];
+        if (element.id != 'pai' && element.id != 'elementoOndeVoceEsta' && element.id != 'primeiroFilhoDoFilho') {
+            element.remove();
+        }
+    }
+}
+removeElement();
+      </script>
+</body>
+</html>

@@ -1,0 +1,6 @@
+## Exercícios Git e GitHub - Entendendo os Comandos
+  * No dia de hoje do curso de desenvolvedor de software da Trybe, realizamos alguns exercícios com comandos git, como criação de novas branchs e modificações em arquivos. Foi utilizado o comando **git add** para deixar as modificações feitas nos arquivos prontas para realizar os commits, e o comando **git commit -m** para adicionar essas modificações a **staging Area**, junto com uma mensagem descrevendo da alteração feita, e então depois de alguns commits foi utilizado o comando **git push** para levar as alterações feitas do repositório local para o remoto, e com isso ser possível a abertura do **Pull Request** e do **Merge** das branchs, quando necessário.
+  * Durante a alteração dos arquivos também foram utilizados comandos importantes no repositório remoto, como o comando **git status**, que mostra o status
+atual da branch, mostra se existe alguma modificação que ainda não foi adicionada ou commitada, o comando **git branch**, que pode ser utulizado tanto para criação de uma nova branch, bastanto digitar o nome desejado no final do comando, ou então para listar as branchs atuais, e o comando **git checkout**,
+utilizado para realizar a troca entre as branchs criadas, bastanto apenas digitar o nome da branch que deseja selecionar no final do comando.
+

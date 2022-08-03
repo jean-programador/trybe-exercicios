@@ -1,0 +1,19 @@
+* {
+  text-align: center;
+}
+
+button {
+  margin-right: 15px;
+}
+
+input {
+  width: 230px;
+}
+
+main {
+  font-family: arial;
+  font-size: 20px;
+  background-color: white;
+  color: black;
+  line-height: 20px;
+}

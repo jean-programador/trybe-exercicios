@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Formulário TrybeTrip</title>
+</head>
+
+<body>
+    <h1>Formulário de inscrição para a TrybeTrip</h1>
+    <form id="form" action="" method="get">
+        <section>
+            <label for="input-name">Nome Completo:</label>
+            <input type="text" name="name" id="input-name" minlength="10" maxlength="40">
+            <label for="input-email">E-mail:</label>
+            <input type="email" name="email" id="input-email" minlength="10" maxlength="50">
+        </section>
+        <section>
+            <fieldset>
+                <legend>Destino Preferido</legend>
+                <label for="input-opt1"><input type="radio" name="opt1" id="input-opt1">Cidade</label>
+                <label for="input-opt2"><input type="radio" name="opt2" id="input-opt2">Campo</label>
+                <label for="input-opt3"><input type="radio" name="opt3" id="input-opt3">Praia</label>
+                <label for="input-opt4"><input type="radio" name="opt4" id="input-opt4">Montanhas</label>
+            </fieldset>
+        </section>
+        <section>
+            <h3>Por que você deveria ser a pessoa desenvolvedora a ganhar o concurso TrybeTrip?</h3>
+            <textarea name="answer" id="textarea-answer" cols="50" rows="10" maxlength="500" placeholder="Digite sua resposta...."></textarea>
+        </section>
+        <label for="input-date">Qual a melhor data para realizar sua viagem? <input type="date" name="date" id="input-date"></label>
+        <section>
+            <label for="checkbox1">Gostaria de receber outras incríveis oportunidades oferecidas pela Trybe? <input type="checkbox" name="agree1" id="checkbox1"></label> <br>
+            <label for="checkbox2">Concordo que imagens das minhas férias poderão ser usadas na divulgação de concursos futuros. <input type="checkbox" name="agree2" id="checkbox2"></label>
+        </section>
+    </form>
+    <button type="submit" id="submit" form="form">Enviar</button>
+    <button type="reset" form="form"> Apagar</button>
+    <script src="script.js"></script>
+</body>
+
+</html>
