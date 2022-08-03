@@ -1,0 +1,37 @@
+<!-- 🚀 Crie uma página HTML que possua um contador de cliques.
+Além da estrutura básica do HTML, sua página deve possuir:
+* Uma tag que receberá o valor atualizado da quantidade de clicks do botão.
+ * Um botão com o texto click aqui!, que receberá um event listener do tipo click;
+Na estrutura do script (dentro do HTML ou em um arquivo de JavaScript ):
+* Crie uma variável clickCount que irá acumular o número de clicks do botão;
+* Crie a lógica do evento, para que a cada click no botão seja adicionado o valor de 1.  -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" name="" id="counter" value="0" />
+    <button id="btn">click aqui!</button>
+    <button id="clear">Clear</button>
+  </body>
+  <script>
+    const btn = document.getElementById('btn');
+    const inp = document.getElementById('counter');
+    const btnClear = document.getElementById('clear');
+    let clickCount = 0;
+
+    btn.addEventListener('click', () => {
+      clickCount += 1;
+      inp.value = clickCount;
+    });
+
+    btnClear.addEventListener('click', () => {
+      inp.value = 0;
+    });
+  </script>
+</html>
