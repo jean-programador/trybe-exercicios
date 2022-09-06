@@ -60,14 +60,14 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online e aborda 
 - [x] 6-3: _CSS Flexbox - Parte 1_
 - [x] 6-4: _CSS Flexbox - Parte 2_
 - [x] 6-5: _CSS Responsivo - Mobile First_
-- [x] 6-6: _[Projeto - Trybewarts]()_
+- [x] 6-6: _[Projeto - Trybewarts](https://github.com/JeanCarlos-SC/Project-TrybeWarts)_
 
 ##### Bloco 7: Introdução à JavaScript ES6 e Testes Unitários
 
 - [x] 7-1: _JavaScript ES6 - let, const, arrow functions e template literals_
 - [x] 7-2: _JavaScript ES6 - Fluxo de exceção e Objetos_
 - [x] 7-3: _Primeiros passos em Jest_
-- [x] 7-4: _[Projeto - JavaScript Testes Unitários]()_
+- [x] 7-4: _[Projeto - JavaScript Testes Unitários](https://github.com/JeanCarlos-SC/Project-JS-Units-Tests)_
 
 ##### Bloco 8: High Order Functions do JavaScript ES6
 
@@ -76,14 +76,14 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online e aborda 
 - [x] 8-3: _JavaScript ES6 - Higher Order Functions - map e filter_
 - [x] 8-4: _JavaScript ES6 - Higher Order Functions - reduce_
 - [x] 8-5: _JavaScript ES6 - spread operator, parâmetro rest, destructuring e mais_
-- [x] 8-6: _[Projeto - Zoo functions]()_
+- [x] 8-6: _[Projeto - Zoo functions](https://github.com/JeanCarlos-SC/Project-Zoo-Functions)_
 
 ##### Bloco 9: JavaScript e Testes Assíncronos
 
 - [X] 9-1: _JavaScript Assíncrono e Callbacks_
 - [x] 9-2: _JavaScript Assíncrono - Fetch API e async/await_
 - [X] 9-3: _Jest - Testes Assíncronos_
-- [X] 9-4: _[Projeto - Carrinho de Compras]()_
+- [X] 9-4: _[Projeto - Carrinho de Compras](https://github.com/JeanCarlos-SC/Project-Shopping-Cart)_
 
 ## Desenvolvimento Front-end :hourglass_flowing_sand:
 
@@ -93,7 +93,7 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online e aborda 
 - [X] 10-1: _Introdução - React_
 - [X] 10-1: _'Hello, world!' no React!_
 - [X] 10-2: _Componentes React
-- [X] 10-3: _[Projeto - Sistema Solar]()_
+- [X] 10-3: _[Projeto - Sistema Solar](https://github.com/JeanCarlos-SC/Project-Solar-System)_
 
 ##### Bloco 11: Componentes com Estado, Eventos e Formulários com React
 
