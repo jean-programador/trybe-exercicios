@@ -80,32 +80,32 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online e aborda 
 
 ##### Bloco 9: JavaScript e Testes Assíncronos
 
-- [ ] 9-1: _JavaScript Assíncrono e Callbacks_
-- [ ] 9-2: _JavaScript Assíncrono - Fetch API e async/await_
-- [ ] 9-3: _Jest - Testes Assíncronos_
-- [ ] 9-4: _[Projeto - Carrinho de Compras]()_
+- [X] 9-1: _JavaScript Assíncrono e Callbacks_
+- [x] 9-2: _JavaScript Assíncrono - Fetch API e async/await_
+- [X] 9-3: _Jest - Testes Assíncronos_
+- [X] 9-4: _[Projeto - Carrinho de Compras]()_
 
 ## Desenvolvimento Front-end :hourglass_flowing_sand:
 
 ##### Bloco 10: Introdução à React
 
-- [ ] 10-1: _Introdução - Front-end_
-- [ ] 10-1: _Introdução - React_
-- [ ] 10-1: _'Hello, world!' no React!_
-- [ ] 10-2: _Componentes React
-- [ ] 10-3: _[Projeto - Sistema Solar]()_
+- [X] 10-1: _Introdução - Front-end_
+- [X] 10-1: _Introdução - React_
+- [X] 10-1: _'Hello, world!' no React!_
+- [X] 10-2: _Componentes React
+- [X] 10-3: _[Projeto - Sistema Solar]()_
 
 ##### Bloco 11: Componentes com Estado, Eventos e Formulários com React
 
-- [ ] 11-1: _Componentes com estado e eventos_
-- [ ] 11-2: _Formulários no React_
-- [ ] 11-3: _[Projeto - Tryunfo]()_
+- [X] 11-1: _Componentes com estado e eventos_
+- [X] 11-2: _Formulários no React_
+- [X] 11-3: _[Projeto - Tryunfo]()_
 
 ##### Bloco 12: Ciclo de Vida de Componentes e React Router
 
-- [ ] 12-1: _Ciclo de vida de componentes_
-- [ ] 12-2: _React Router_
-- [ ] 12-3: _[Projeto - TrybeTunes]()_
+- [X] 12-1: _Ciclo de vida de componentes_
+- [X] 12-2: _React Router_
+- [X] 12-3: _[Projeto - TrybeTunes]()_
 
 ##### Bloco 13: Metodologias Ágeis
 
