@@ -30,7 +30,7 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online e aborda 
 - [x] 3-4: _HTML Semântico_
 - [x] 3-5: _[Projeto - Lessons Leanerd](https://github.com/JeanCarlos-SC/Projeto-Lessons-Learned)_
 
-##### Bloco 4: Introdução à JavaScript e Lógica de Programação
+##### Bloco 4: Introdução à JavaScript e Lógica de Programação ✔️
 
 - [x] 4-1: _Introdução - JavaScript_
 - [x] 4-1: _JavaScript - Primeiros passos_
@@ -39,7 +39,7 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online e aborda 
 - [x] 4-4: _JavaScript - Objetos e Funções_
 - [x] 4-5: _[Projeto - Playground Functions](https://github.com/JeanCarlos-SC/Projeto-Playground-Functions)_
 
-##### Bloco 5: JavaScript: DOM, Eventos e Web Storage
+##### Bloco 5: JavaScript: DOM, Eventos e Web Storage ✔️
 
 - [x] 5-1: _JavaScript - DOM e seletores_
 - [x] 5-2: _JavaScript - Trabalhando com elementos_
@@ -52,7 +52,7 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online e aborda 
 - [ ] 5-7: _(Bônus)[Projeto - Adivinhe a Cor]()_
 - [ ] 5-7: _(Bônus)[Projeto - Carta Misteriosa]()_
 
-##### Bloco 6: HTML e CSS: Forms, Flexbox e Responsivo
+##### Bloco 6: HTML e CSS: Forms, Flexbox e Responsivo ✔️
 
 - [x] 6-1: _HTML & CSS - Forms_
 - [x] 6-2: _Bibliotecas JavaScript e Frameworks CSS_
@@ -62,14 +62,14 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online e aborda 
 - [x] 6-5: _CSS Responsivo - Mobile First_
 - [x] 6-6: _[Projeto - Trybewarts](https://github.com/JeanCarlos-SC/Project-TrybeWarts)_
 
-##### Bloco 7: Introdução à JavaScript ES6 e Testes Unitários
+##### Bloco 7: Introdução à JavaScript ES6 e Testes Unitários ✔️
 
 - [x] 7-1: _JavaScript ES6 - let, const, arrow functions e template literals_
 - [x] 7-2: _JavaScript ES6 - Fluxo de exceção e Objetos_
 - [x] 7-3: _Primeiros passos em Jest_
 - [x] 7-4: _[Projeto - JavaScript Testes Unitários](https://github.com/JeanCarlos-SC/Project-JS-Units-Tests)_
 
-##### Bloco 8: High Order Functions do JavaScript ES6
+##### Bloco 8: High Order Functions do JavaScript ES6 ✔️
 
 - [x] 8-1: _JavaScript ES6 - Introdução a High Order Functions_
 - [x] 8-2: _JavaScript ES6 - Higher Order Functions - forEach, find, some, every, sort_
@@ -78,7 +78,7 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online e aborda 
 - [x] 8-5: _JavaScript ES6 - spread operator, parâmetro rest, destructuring e mais_
 - [x] 8-6: _[Projeto - Zoo functions](https://github.com/JeanCarlos-SC/Project-Zoo-Functions)_
 
-##### Bloco 9: JavaScript e Testes Assíncronos
+##### Bloco 9: JavaScript e Testes Assíncronos ✔️
 
 - [X] 9-1: _JavaScript Assíncrono e Callbacks_
 - [x] 9-2: _JavaScript Assíncrono - Fetch API e async/await_
@@ -87,7 +87,7 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online e aborda 
 
 ## Desenvolvimento Front-end :hourglass_flowing_sand:
 
-##### Bloco 10: Introdução à React
+##### Bloco 10: Introdução à React ✔️
 
 - [X] 10-1: _Introdução - Front-end_
 - [X] 10-1: _Introdução - React_
@@ -95,29 +95,29 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online e aborda 
 - [X] 10-2: _Componentes React
 - [X] 10-3: _[Projeto - Sistema Solar](https://github.com/JeanCarlos-SC/Project-Solar-System)_
 
-##### Bloco 11: Componentes com Estado, Eventos e Formulários com React
+##### Bloco 11: Componentes com Estado, Eventos e Formulários com React ✔️
 
 - [X] 11-1: _Componentes com estado e eventos_
 - [X] 11-2: _Formulários no React_
 - [X] 11-3: _[Projeto - Tryunfo]()_
 
-##### Bloco 12: Ciclo de Vida de Componentes e React Router
+##### Bloco 12: Ciclo de Vida de Componentes e React Router ✔️
 
 - [X] 12-1: _Ciclo de vida de componentes_
 - [X] 12-2: _React Router_
 - [X] 12-3: _[Projeto - TrybeTunes]()_
 
-##### Bloco 13: Metodologias Ágeis
+##### Bloco 13: Metodologias Ágeis ✔️
 
-- [ ] 13-1: _Metodologias Ágeis_
-- [ ] 13-2: _[Projeto - Frontend Online Store]()_
+- [X] 13-1: _Metodologias Ágeis_
+- [X] 13-2: _[Projeto - Frontend Online Store]()_
 
-##### Bloco 14: Testes automatizados com React Testing Library
+##### Bloco 14: Testes automatizados com React Testing Library ✔️
 
-- [ ] 14-1: _RTL - Primeiros passos_
-- [ ] 14-2: _RTL - Mocks e Inputs_
-- [ ] 14-3: _RTL - Testando React Router_
-- [ ] 14-4: _[Projeto - Testes em React]()_
+- [X] 14-1: _RTL - Primeiros passos_
+- [X] 14-2: _RTL - Mocks e Inputs_
+- [X] 14-3: _RTL - Testando React Router_
+- [X] 14-4: _[Projeto - Testes em React]()_
 
 ##### Bloco 15: Gerenciamento de estado com Redux
 
