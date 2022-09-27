@@ -103,9 +103,9 @@
       const container = document.getElementById('container');
       const span = document.getElementById('value');
       store.subscribe(() => {
-        container.style.backgroundColor =
-          store.getState().colors[store.getState().index];
-        span.innerHTML = store.getState().colors[store.getState().index];
+        const { colors, index } = store.getState();
+        container.style.backgroundColor = colors[index];
+        span.innerHTML = colors[index];
       });
     </script>
   </body>
