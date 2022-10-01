@@ -49,8 +49,6 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online e aborda 
 - [x] 5-5: _[Projeto - Arte com Pixels](https://github.com/JeanCarlos-SC/Project-Pixels-Art)_
 - [x] 5-6: _(Bônus)[Projeto - Lista de tarefas](https://github.com/JeanCarlos-SC/Project-My-First-ToDo-List)_
 - [x] 5-7: _(Bônus)[Projeto - Meme Generator](https://github.com/JeanCarlos-SC/Project-Meme-Generator)_
-- [ ] 5-7: _(Bônus)[Projeto - Adivinhe a Cor]()_
-- [ ] 5-7: _(Bônus)[Projeto - Carta Misteriosa]()_
 
 ##### Bloco 6: HTML e CSS: Forms, Flexbox e Responsivo ✔️
 
@@ -99,13 +97,13 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online e aborda 
 
 - [X] 11-1: _Componentes com estado e eventos_
 - [X] 11-2: _Formulários no React_
-- [X] 11-3: _[Projeto - Tryunfo]()_
+- [X] 11-3: Projeto - Tryunfo
 
 ##### Bloco 12: Ciclo de Vida de Componentes e React Router ✔️
 
 - [X] 12-1: _Ciclo de vida de componentes_
 - [X] 12-2: _React Router_
-- [X] 12-3: _[Projeto - TrybeTunes]()_
+- [X] 12-3: Projeto - TrybeTunes
 
 ##### Bloco 13: Metodologias Ágeis ✔️
 
