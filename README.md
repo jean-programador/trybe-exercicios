@@ -108,14 +108,14 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online e aborda 
 ##### Bloco 13: Metodologias Ágeis ✔️
 
 - [X] 13-1: _Metodologias Ágeis_
-- [X] 13-2: _[Projeto - Frontend Online Store]()_
+- [X] 13-2: _[Projeto - Frontend Online Store](https://github.com/JeanCarlos-SC/Project-Front-End-Online-Store)_
 
 ##### Bloco 14: Testes automatizados com React Testing Library ✔️
 
 - [X] 14-1: _RTL - Primeiros passos_
 - [X] 14-2: _RTL - Mocks e Inputs_
 - [X] 14-3: _RTL - Testando React Router_
-- [X] 14-4: _[Projeto - Testes em React]()_
+- [X] 14-4: _Projeto - Testes em React_
 
 ##### Bloco 15: Gerenciamento de estado com Redux
 
