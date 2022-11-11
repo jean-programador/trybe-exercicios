@@ -83,7 +83,7 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online e aborda 
 - [X] 9-3: _Jest - Testes Assíncronos_
 - [X] 9-4: _[Projeto - Carrinho de Compras](https://github.com/JeanCarlos-SC/Project-Shopping-Cart)_
 
-## Desenvolvimento Front-end :hourglass_flowing_sand:
+## Desenvolvimento Front-end :white_check_mark:
 
 ##### Bloco 10: Introdução à React ✔️
 
@@ -117,7 +117,7 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online e aborda 
 - [X] 14-3: _RTL - Testando React Router_
 - [X] 14-4: _Projeto - Testes em React_
 
-##### Bloco 15: Gerenciamento de estado com Redux
+##### Bloco 15: Gerenciamento de estado com Redux ✔️
 
 - [X] 15-1: _Introdução ao Redux - O estado global da aplicação_
 - [X] 15-2: _Usando o Redux no React_
@@ -126,29 +126,29 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online e aborda 
 - [X] 15-5: _Testes em React-Redux_
 - [ ] 15-6: _[Projeto - Trybe Wallet]()_
 
-##### Bloco 16: Projeto Jogo de Trivia
+##### Bloco 16: Projeto Jogo de Trivia ✔️
 
-- [ ] 16-1: _[Projeto - Jogo de Trivia]()_
+- [x] 16-1: _[Projeto - Jogo de Trivia]()_
 
-##### Bloco 17: Context API e React Hooks
+##### Bloco 17: Context API e React Hooks ✔️
 
-- [ ] 17-1: _Context API do React_
-- [ ] 17-2: _React Hooks - useState e useContext_
-- [ ] 17-3: _React Hooks - useEffect e Hooks customizados_
-- [ ] 17-4: _[Projeto - StarWars Datatable com Context API e Hooks]()_
+- [x] 17-1: _Context API do React_
+- [x] 17-2: _React Hooks - useState e useContext_
+- [x] 17-3: _React Hooks - useEffect e Hooks customizados_
+- [x] 17-4: _[Projeto - StarWars Datatable com Context API e Hooks]()_
 
-##### Bloco 18: Projeto App de Receitas
+##### Bloco 18: Projeto App de Receitas ✔️
 
-- [ ] 18-1: _[Projeto - App de Receitas]()_
+- [x] 18-1: _[Projeto - App de Receitas]()_
 
 ## Desenvolvimento Back-end :hourglass_flowing_sand:
 
 ##### Bloco 19: Docker: Utilizando Containers
 
-- [ ] 19-1: _Introdução - Back-end_
-- [ ] 19-1: _Utilizando Containers - Docker_
-- [ ] 19-2: _Manipulação e Criação de Imagens no Docker_
-- [ ] 19-3: _Orquestrando Containers com Docker Compose_
+- [x] 19-1: _Introdução - Back-end_
+- [x] 19-1: _Utilizando Containers - Docker_
+- [x] 19-2: _Manipulação e Criação de Imagens no Docker_
+- [x] 19-3: _Orquestrando Containers com Docker Compose_
 - [ ] 19-4: _[Projeto - Docker Todo-List]()_
 
 ##### Bloco 20: Introdução à SQL
