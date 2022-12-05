@@ -20,12 +20,15 @@ Solução: arquivos: **ex1.sql** e **ex1_model.mwb**
 
 Exercício 2: 🚀 Converta a tabela desnormalizada abaixo para a 1ª Forma Normal.
 <img src='imgs/primeira-forma.png' alt='resultado' width=800px></img>
+
 Solução: arquivo: **primeira-forma-normal.xlsx**
 
 Exercício 3: 🚀 Converta a tabela desnormalizada abaixo (que já está nos padrões da 1ª Forma Normal) para a 2ª Forma Normal.
 <img src='imgs/segunda-forma.png' alt='resultado' width=800px></img>
+
 Solução: arquivo: **segunda-forma-normal.xlsx**
 
 Exercício 4: 🚀 Agora, converta essa outra tabela (que já está nos moldes das duas primeiras formas) para a 3ª Forma Normal.
 <img src='imgs/terceira-forma.png' alt='resultado' width=800px></img>
+
 Solução: arquivo: **terceira-forma-normal.xlsx**
