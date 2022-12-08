@@ -10,6 +10,7 @@
   "author": "jean-carlos",
   "license": "ISC",
   "dependencies": {
+    "fs": "^0.0.1-security",
     "readline-async": "^0.1.0",
     "readline-sync": "^1.4.10"
   }
