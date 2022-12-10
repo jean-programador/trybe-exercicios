@@ -2,10 +2,11 @@
   "name": "my-scripts",
   "version": "1.0.0",
   "description": "exercicios-trybe",
-  "main": "bmi.js",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "bmi": "node bmi.js"
+    "bmi": "node bmi.js",
+    "start": "node ."
   },
   "author": "jean-carlos",
   "license": "ISC",
