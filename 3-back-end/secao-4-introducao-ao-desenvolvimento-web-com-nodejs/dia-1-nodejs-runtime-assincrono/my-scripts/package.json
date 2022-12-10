@@ -1,0 +1,19 @@
+{
+  "name": "my-scripts",
+  "version": "1.0.0",
+  "description": "exercicios-trybe",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "bmi": "node bmi.js",
+    "start": "node .",
+    "fibonacci": "node fibonacci.js"
+  },
+  "author": "jean-carlos",
+  "license": "ISC",
+  "dependencies": {
+    "fs": "^0.0.1-security",
+    "readline-async": "^0.1.0",
+    "readline-sync": "^1.4.10"
+  }
+}
