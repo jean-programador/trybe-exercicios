@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "bmi": "node bmi.js",
-    "start": "node ."
+    "start": "node .",
+    "fibonacci": "node fibonacci.js"
   },
   "author": "jean-carlos",
   "license": "ISC",
