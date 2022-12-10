@@ -8,8 +8,17 @@ async function testPromisse(n1, n2, n3) {
       reject(new Error('Informe apenas números'));
     const result = (n1 + n2) * n3;
     if (result < 50) reject(new Error('Valor muito baixo'));
-    resolve(console.log(result));
+    resolve(result);
   });
 }
 
-testPromisse(1, 2, 50);
+async function testFunction() {
+  try {
+    const result = await testPromisse(1, 2, 30);
+    console.log(result);
+  } catch (error) {
+    console.error(error.message);
+  }
+}
+
+testFunction();
