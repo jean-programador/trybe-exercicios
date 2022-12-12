@@ -60,10 +60,25 @@ async function deleteMovie(id) {
     console.error(error.message);
   }
 }
+
+async function filterByName(filter) {
+  const moviesResponse = await readMoviesData();
+  const filteredMovies = moviesResponse.filter((where) =>
+    where.movie.includes(filter),
+  );
+
+  if (filteredMovies.length > 0) {
+    console.log('Search Results:');
+    return filteredMovies;
+  }
+  console.log('Not Found Movies');
+  return [];
+}
 module.exports = {
   readMoviesData,
   getById,
   addMovie,
   editMovie,
   deleteMovie,
+  filterByName,
 };
