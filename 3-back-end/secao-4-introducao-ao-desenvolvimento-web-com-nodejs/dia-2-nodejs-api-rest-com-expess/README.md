@@ -8,12 +8,18 @@
 ## Exercício 1
 
 **Qual é a função do código de status `400` e `422`?**
+
+
 `400 (Bad Request)` - Erro do cliente, servidor não entendeu a requisição por causa de sintaxe inválida
+
+
 `422 (Unprocessable Entity)` - Sintaxe correta, mas não possível prosseguir com a requisição, por erro de semântica
 
 ## Exercício 2
 
 **Qual é a função do código de status `401`?**
+
+
 `422 Unauthorized)` - Significa que o cliente não está autenticado no sistema, e precisa se autenticar (logar) para continuar.
 
 ---
@@ -105,6 +111,7 @@ O corpo da requisição deve receber o seguinte formato:
 ## 🚀 Exercício 9
 
 Crie um endpoint do tipo `DELETE` com a rota `/movies/:id` que possa deletar um filme do JSON.
+*************************************
 
 > **Exercício Bônus**
 
