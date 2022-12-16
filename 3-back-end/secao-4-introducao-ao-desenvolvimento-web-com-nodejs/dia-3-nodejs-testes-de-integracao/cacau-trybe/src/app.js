@@ -28,4 +28,12 @@ app.get('/chocolates/quantidade/total', async (req, res) => {
   const total = await cacauTrybe.getTotalChocolates();
   res.status(200).json({ totalChocolates: total });
 });
+
+app.get('/chocolates/pesquisa/search', async (req, res) => {
+  const { name } = req.query;
+  const chocolateByName = await cacauTrybe.getChocolatesByName(name);
+  if (chocolateByName.length === 0) return res.status(404).json([]);
+  res.status(200).json(chocolateByName);
+});
+
 module.exports = app;
