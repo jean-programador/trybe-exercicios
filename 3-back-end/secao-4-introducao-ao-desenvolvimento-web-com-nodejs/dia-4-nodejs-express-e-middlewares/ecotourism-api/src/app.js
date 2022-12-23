@@ -8,7 +8,7 @@ const {
   validateFormatDate,
   validateRating,
   validateDifficulty,
-} = require('./validations');
+} = require('./validationsActivies');
 
 const app = express();
 

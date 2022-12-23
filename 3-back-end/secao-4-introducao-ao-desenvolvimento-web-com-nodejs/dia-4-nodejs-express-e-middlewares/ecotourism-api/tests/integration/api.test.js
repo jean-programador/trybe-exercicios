@@ -207,3 +207,28 @@ describe('Usando o método POST em /activities', function () {
     expect(response.body.message).to.equal('Atividade cadastrada com sucesso!');
   });
 });
+
+describe('Usando o método POST em /signup', function () {
+  it('Retorna status 401 - Unauthorized se algum dos campos obrigatórios não estiver preenchido', async function () {
+    const response = await chai.request(app).post('/signup').send({
+      email: 'Joao@email.com',
+      password: '123456',
+      firstName: 'Joao',
+    });
+
+    expect(response.status).to.be.equal(401);
+    expect(response.body.message).to.equal('Campos obrigatórios ausentes');
+  });
+
+  it('Retorna status 200 e um json contendo um token aleatório, se todos os campos forem preenchidos corretamente', async function () {
+    const response = await chai.request(app).post('/signup').send({
+      email: 'Joao@email.com',
+      password: '123456',
+      firstName: 'Joao',
+      phone: '(47)-99738-1273',
+    });
+
+    expect(response.status).to.be.equal(200);
+    expect(response.body.message).to.equal('Campos obrigatórios ausentes');
+  });
+});
