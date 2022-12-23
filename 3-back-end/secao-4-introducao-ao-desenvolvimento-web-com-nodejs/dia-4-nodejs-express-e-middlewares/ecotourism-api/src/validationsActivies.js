@@ -1,29 +1,27 @@
 const validateName = (req, res, next) => {
-  const requiredProperties = ['name'];
   const { name } = req.body;
-  if (!requiredProperties.every((property) => property in req.body)) {
+  if (!name) {
     return res.status(400).json({ message: 'O campo name é obrigatório' });
-  } else if (name.length < 4) {
+  }
+  if (name.length < 4) {
     return res
       .status(400)
       .json({ message: 'O campo name deve ter pelo menos 4 caracteres' });
-  } else {
-    next();
   }
+  next();
 };
 
 const validatePrice = (req, res, next) => {
-  const requiredProperties = ['price'];
   const { price } = req.body;
-  if (!requiredProperties.every((property) => property in req.body)) {
+  if (!price) {
     return res.status(400).json({ message: 'O campo price é obrigatório' });
-  } else if (price < 0) {
+  }
+  if (price < 0 || typeof price !== 'number') {
     return res.status(400).json({
       message: 'O campo price deve ser um número maior ou igual a zero',
     });
-  } else {
-    next();
   }
+  next();
 };
 
 const validateDescription = (req, res, next) => {
@@ -33,17 +31,19 @@ const validateDescription = (req, res, next) => {
     return res.status(400).json({
       message: 'O campo description é obrigatório',
     });
-  } else if (!keysDescription.includes('createdAt')) {
+  }
+  if (!keysDescription.includes('createdAt')) {
     return res.status(400).json({ message: 'O campo createdAt é obrigatório' });
-  } else if (!keysDescription.includes('rating')) {
+  }
+  if (!keysDescription.includes('rating')) {
     return res.status(400).json({ message: 'O campo rating é obrigatório' });
-  } else if (!keysDescription.includes('difficulty')) {
+  }
+  if (!keysDescription.includes('difficulty')) {
     return res
       .status(400)
       .json({ message: 'O campo difficulty é obrigatório' });
-  } else {
-    next();
   }
+  next();
 };
 
 const validateFormatDate = (req, res, next) => {
@@ -60,9 +60,8 @@ const validateFormatDate = (req, res, next) => {
     return res.status(400).json({
       message: "O campo createdAt deve ter o formato 'dd/mm/aaaa'\"",
     });
-  } else {
-    next();
   }
+  next();
 };
 
 const validateRating = (req, res, next) => {
@@ -71,9 +70,8 @@ const validateRating = (req, res, next) => {
     return res.status(400).json({
       message: 'O campo rating deve ser um número inteiro entre 1 e 5',
     });
-  } else {
-    next();
   }
+  next();
 };
 
 const validateDifficulty = (req, res, next) => {
@@ -83,9 +81,8 @@ const validateDifficulty = (req, res, next) => {
     return res.status(400).json({
       message: "O campo difficulty deve ser 'Fácil', 'Médio' ou 'Difícil'\"",
     });
-  } else {
-    next();
   }
+  next();
 };
 
 module.exports = {

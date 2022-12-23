@@ -50,6 +50,18 @@ describe('Usando o método POST em /activities', function () {
     );
   });
 
+  it('Retorna status 400 e mensagem de erro caso a prop price não seja um número', async function () {
+    const response = await chai.request(app).post('/activities').send({
+      name: 'Joao',
+      price: 'A',
+    });
+
+    expect(response.status).to.be.equal(400);
+    expect(response.body.message).to.equal(
+      'O campo price deve ser um número maior ou igual a zero',
+    );
+  });
+
   it('Retorna status 400 e mensagem de erro caso a prop description não exista', async function () {
     const response = await chai.request(app).post('/activities').send({
       name: 'Joao',
