@@ -129,6 +129,66 @@ describe('Usando o método POST em /activities', function () {
     );
   });
 
+  it('Retorna status 400 e mensagem de erro caso a chave rating não seja um número inteiro', async function () {
+    const response = await chai
+      .request(app)
+      .post('/activities')
+      .send({
+        name: 'Joao',
+        price: 5,
+        description: {
+          rating: 4.7,
+          createdAt: '10/08/2022',
+          difficulty: 'Fácil',
+        },
+      });
+
+    expect(response.status).to.be.equal(400);
+    expect(response.body.message).to.equal(
+      'O campo rating deve ser um número inteiro entre 1 e 5',
+    );
+  });
+
+  it('Retorna status 400 e mensagem de erro caso a chave rating não seja um número entre 1 e 5', async function () {
+    const response = await chai
+      .request(app)
+      .post('/activities')
+      .send({
+        name: 'Joao',
+        price: 5,
+        description: {
+          rating: 6,
+          createdAt: '10/08/2022',
+          difficulty: 'Fácil',
+        },
+      });
+
+    expect(response.status).to.be.equal(400);
+    expect(response.body.message).to.equal(
+      'O campo rating deve ser um número inteiro entre 1 e 5',
+    );
+  });
+
+  it('Retorna status 400 e mensagem de erro caso a chave difficulty não seja dos valores válidos', async function () {
+    const response = await chai
+      .request(app)
+      .post('/activities')
+      .send({
+        name: 'Joao',
+        price: 5,
+        description: {
+          rating: 5,
+          createdAt: '10/08/2022',
+          difficulty: 'Intermediário',
+        },
+      });
+
+    expect(response.status).to.be.equal(400);
+    expect(response.body.message).to.equal(
+      "O campo difficulty deve ser 'Fácil', 'Médio' ou 'Difícil'\"",
+    );
+  });
+
   it('Retorna status 201 e mensagem de sucesso quando o body é passado corretamente', async function () {
     const response = await chai
       .request(app)
@@ -138,7 +198,7 @@ describe('Usando o método POST em /activities', function () {
         price: 5,
         description: {
           rating: 5,
-          difficulty: 'Fácil',
+          difficulty: 'Difícil',
           createdAt: '10/08/2022',
         },
       });

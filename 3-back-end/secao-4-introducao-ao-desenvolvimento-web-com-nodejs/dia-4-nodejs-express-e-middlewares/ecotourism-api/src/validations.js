@@ -65,9 +65,34 @@ const validateFormatDate = (req, res, next) => {
   }
 };
 
+const validateRating = (req, res, next) => {
+  const { rating } = req.body.description;
+  if (!Number.isInteger(rating) || rating < 1 || rating > 5) {
+    return res.status(400).json({
+      message: 'O campo rating deve ser um número inteiro entre 1 e 5',
+    });
+  } else {
+    next();
+  }
+};
+
+const validateDifficulty = (req, res, next) => {
+  const { difficulty } = req.body.description;
+  const valuesValids = ['Fácil', 'Médio', 'Difícil'];
+  if (!valuesValids.includes(difficulty)) {
+    return res.status(400).json({
+      message: "O campo difficulty deve ser 'Fácil', 'Médio' ou 'Difícil'\"",
+    });
+  } else {
+    next();
+  }
+};
+
 module.exports = {
   validateName,
   validatePrice,
   validateDescription,
   validateFormatDate,
+  validateRating,
+  validateDifficulty,
 };
