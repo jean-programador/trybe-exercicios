@@ -7,6 +7,18 @@ const validateAuthentication = (req, res, next) => {
   }
 };
 
+const fs = require('fs').promises;
+
+const validateToken = async (req, res, next) => {
+  const token = req.header('Authorization');
+  if (token && token.length === 16) {
+    next();
+  } else {
+    res.status(401).json({ message: 'Token inválido!' });
+  }
+};
+
 module.exports = {
   validateAuthentication,
+  validateToken,
 };

@@ -191,10 +191,30 @@ describe('Usando o método POST em /activities', function () {
     );
   });
 
+  it('Retorna status 401 e mensagem de token inválido quando token passado é incorreto', async function () {
+    const response = await chai
+      .request(app)
+      .post('/activities')
+      .set('Authorization', '123456789')
+      .send({
+        name: 'Joao',
+        price: 5,
+        description: {
+          rating: 5,
+          difficulty: 'Difícil',
+          createdAt: '10/08/2022',
+        },
+      });
+
+    expect(response.status).to.be.equal(401);
+    expect(response.body.message).to.equal('Token inválido!');
+  });
+
   it('Retorna status 201 e mensagem de sucesso quando o body é passado corretamente', async function () {
     const response = await chai
       .request(app)
       .post('/activities')
+      .set('Authorization', '6147567362473867')
       .send({
         name: 'Joao',
         price: 5,

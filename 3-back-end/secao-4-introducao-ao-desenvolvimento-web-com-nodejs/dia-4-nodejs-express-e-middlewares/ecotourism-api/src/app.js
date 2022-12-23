@@ -2,6 +2,7 @@ const express = require('express');
 const morgan = require('morgan');
 const crypto = require('crypto');
 require('express-async-errors');
+
 const {
   validateName,
   validatePrice,
@@ -10,7 +11,10 @@ const {
   validateRating,
   validateDifficulty,
 } = require('./validationsActivies');
-const { validateAuthentication } = require('./validationsSignUp');
+const {
+  validateAuthentication,
+  validateToken,
+} = require('./validationsSignUp');
 
 const app = express();
 
@@ -18,8 +22,9 @@ app.use(express.json());
 app.use(morgan('dev'));
 
 app.post('/signup', validateAuthentication, async (_req, res) => {
-  const tokenHex = await crypto.randomBytes(8);
-  res.status(200).json({ token: tokenHex.toString('hex') });
+  const buffer = await crypto.randomBytes(8);
+  const tokenHex = buffer.toString('hex');
+  res.status(200).json({ token: tokenHex });
 });
 
 app.use(
@@ -29,6 +34,7 @@ app.use(
   validateFormatDate,
   validateRating,
   validateDifficulty,
+  validateToken,
 );
 
 app.post('/activities', (_req, res) => {
