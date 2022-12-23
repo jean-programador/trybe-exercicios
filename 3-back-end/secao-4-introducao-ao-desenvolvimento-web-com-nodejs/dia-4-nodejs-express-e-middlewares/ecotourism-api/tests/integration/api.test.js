@@ -27,9 +27,31 @@ describe('Usando o método POST em /activities', function () {
     );
   });
 
-  it('Retorna status 201 e mensagem de sucesso caso a prop name seja passada corretamente', async function () {
+  it('Retorna status 400 e mensagem de erro caso a prop price não exista', async function () {
     const response = await chai.request(app).post('/activities').send({
       name: 'Joao',
+    });
+
+    expect(response.status).to.be.equal(400);
+    expect(response.body.message).to.equal('O campo price é obrigatório');
+  });
+
+  it('Retorna status 400 e mensagem de erro caso a prop price seja menor que zero', async function () {
+    const response = await chai.request(app).post('/activities').send({
+      name: 'Joao',
+      price: -1,
+    });
+
+    expect(response.status).to.be.equal(400);
+    expect(response.body.message).to.equal(
+      'O campo price deve ser um número maior ou igual a zero',
+    );
+  });
+
+  it('Retorna status 201 e mensagem de sucesso quando o body é passado corretamente', async function () {
+    const response = await chai.request(app).post('/activities').send({
+      name: 'Joao',
+      price: 5,
     });
 
     expect(response.status).to.be.equal(201);
