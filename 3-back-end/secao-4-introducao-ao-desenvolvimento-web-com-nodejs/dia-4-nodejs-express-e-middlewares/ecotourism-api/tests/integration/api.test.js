@@ -48,11 +48,80 @@ describe('Usando o método POST em /activities', function () {
     );
   });
 
-  it('Retorna status 201 e mensagem de sucesso quando o body é passado corretamente', async function () {
+  it('Retorna status 400 e mensagem de erro caso a prop description não exista', async function () {
     const response = await chai.request(app).post('/activities').send({
       name: 'Joao',
       price: 5,
     });
+
+    expect(response.status).to.be.equal(400);
+    expect(response.body.message).to.equal('O campo description é obrigatório');
+  });
+
+  it('Retorna status 400 e mensagem de erro caso a chave createdAt da prop description não exista', async function () {
+    const response = await chai
+      .request(app)
+      .post('/activities')
+      .send({
+        name: 'Joao',
+        price: 5,
+        description: {
+          rating: 5,
+          difficulty: 'Fácil',
+        },
+      });
+
+    expect(response.status).to.be.equal(400);
+    expect(response.body.message).to.equal('O campo createdAt é obrigatório');
+  });
+
+  it('Retorna status 400 e mensagem de erro caso a chave rating da prop description não exista', async function () {
+    const response = await chai
+      .request(app)
+      .post('/activities')
+      .send({
+        name: 'Joao',
+        price: 5,
+        description: {
+          difficulty: 'Fácil',
+          createdAt: '10/08/2022',
+        },
+      });
+
+    expect(response.status).to.be.equal(400);
+    expect(response.body.message).to.equal('O campo rating é obrigatório');
+  });
+
+  it('Retorna status 400 e mensagem de erro caso a chave difficulty da prop description não exista', async function () {
+    const response = await chai
+      .request(app)
+      .post('/activities')
+      .send({
+        name: 'Joao',
+        price: 5,
+        description: {
+          rating: 5,
+          createdAt: '10/08/2022',
+        },
+      });
+
+    expect(response.status).to.be.equal(400);
+    expect(response.body.message).to.equal('O campo difficulty é obrigatório');
+  });
+
+  it('Retorna status 201 e mensagem de sucesso quando o body é passado corretamente', async function () {
+    const response = await chai
+      .request(app)
+      .post('/activities')
+      .send({
+        name: 'Joao',
+        price: 5,
+        description: {
+          rating: 5,
+          difficulty: 'Fácil',
+          createdAt: '10/08/2022',
+        },
+      });
 
     expect(response.status).to.be.equal(201);
     expect(response.body.message).to.equal('Atividade cadastrada com sucesso!');
