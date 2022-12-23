@@ -109,6 +109,26 @@ describe('Usando o método POST em /activities', function () {
     expect(response.body.message).to.equal('O campo difficulty é obrigatório');
   });
 
+  it('Retorna status 400 e mensagem de erro caso a chave createdAt não esteja no formato válido de data', async function () {
+    const response = await chai
+      .request(app)
+      .post('/activities')
+      .send({
+        name: 'Joao',
+        price: 5,
+        description: {
+          rating: 5,
+          createdAt: '08/20/2022',
+          difficulty: 'Fácil',
+        },
+      });
+
+    expect(response.status).to.be.equal(400);
+    expect(response.body.message).to.equal(
+      "O campo createdAt deve ter o formato 'dd/mm/aaaa'\"",
+    );
+  });
+
   it('Retorna status 201 e mensagem de sucesso quando o body é passado corretamente', async function () {
     const response = await chai
       .request(app)
