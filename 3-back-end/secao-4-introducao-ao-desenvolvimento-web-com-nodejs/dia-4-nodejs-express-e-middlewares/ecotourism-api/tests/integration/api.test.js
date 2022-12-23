@@ -1,6 +1,8 @@
 const chai = require('chai');
 const chaiHttp = require('chai-http');
 const app = require('../../src/app');
+const sinon = require('sinon');
+const crypto = require('crypto');
 
 chai.use(chaiHttp);
 
@@ -209,6 +211,9 @@ describe('Usando o método POST em /activities', function () {
 });
 
 describe('Usando o método POST em /signup', function () {
+  const buf = Buffer.alloc(8, 'aGVsbG8gd29ybGQ=');
+  sinon.stub(crypto, 'randomBytes').resolves(buf);
+
   it('Retorna status 401 - Unauthorized se algum dos campos obrigatórios não estiver preenchido', async function () {
     const response = await chai.request(app).post('/signup').send({
       email: 'Joao@email.com',
@@ -227,8 +232,7 @@ describe('Usando o método POST em /signup', function () {
       firstName: 'Joao',
       phone: '(47)-99738-1273',
     });
-
     expect(response.status).to.be.equal(200);
-    expect(response.body.message).to.equal('Campos obrigatórios ausentes');
+    expect(response.body.token).to.equal('6147567362473867');
   });
 });

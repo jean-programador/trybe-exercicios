@@ -1,5 +1,6 @@
 const express = require('express');
 const morgan = require('morgan');
+const crypto = require('crypto');
 require('express-async-errors');
 const {
   validateName,
@@ -9,11 +10,18 @@ const {
   validateRating,
   validateDifficulty,
 } = require('./validationsActivies');
+const { validateAuthentication } = require('./validationsSignUp');
 
 const app = express();
 
 app.use(express.json());
 app.use(morgan('dev'));
+
+app.post('/signup', validateAuthentication, async (_req, res) => {
+  const tokenHex = await crypto.randomBytes(8);
+  res.status(200).json({ token: tokenHex.toString('hex') });
+});
+
 app.use(
   validateName,
   validatePrice,
