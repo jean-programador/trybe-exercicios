@@ -2,6 +2,7 @@ const express = require('express');
 const morgan = require('morgan');
 require('express-async-errors');
 const { validateName } = require('./validations');
+
 const app = express();
 
 app.use(express.json());
