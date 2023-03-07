@@ -124,7 +124,7 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online e aborda 
 - [X] 15-3: _Usando o Redux no React - Prática_
 - [X] 15-4: _Usando o Reduxno React - Actions Assíncronas_
 - [X] 15-5: _Testes em React-Redux_
-- [ ] 15-6: _[Projeto - Trybe Wallet]()_
+- [X] 15-6: _[Projeto - Trybe Wallet]()_
 
 ##### Bloco 16: Projeto Jogo de Trivia ✔️
 
@@ -169,38 +169,35 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online e aborda 
 
 ##### Bloco 22: Introdução ao desenvolvimento Web com Node.js
 
-- [ ] 22-1: _Intro - Node.js_
-- [ ] 22-1: _Node.js - Um motor JavaScript_
-- [ ] 22-2: _Node.js - Fluxo Assíncrono_
-- [ ] 22-3: _Mocha, Chai e Sinon - Testes de Back-end com Node.js_
-- [ ] 22-4: _Express - HTTP com Node.js_
-- [ ] 22-5: _Express - Middlewares_
-- [ ] 22-6: _Atividades + [Projeto - Talker Manager]()_
+- [X] 22-1: _Intro - Node.js_
+- [X] 22-1: _Node.js - Um motor JavaScript_
+- [X] 22-2: _Node.js - Fluxo Assíncrono_
+- [X] 22-3: _Mocha, Chai e Sinon - Testes de Back-end com Node.js_
+- [X] 22-4: _Express - HTTP com Node.js_
+- [X] 22-5: _Express - Middlewares_
+- [X] 22-6: _Atividades + [Projeto - Talker Manager]()_
 
 ##### Bloco 23: Node.js: Camada de Serviço e Arquitetura Rest e Restful
 
-- [ ] 23-1: _Introdução - Arquitetura de Software_
-- [ ] 23-1: _Arquitetura de Software - Camada de Model_
-- [ ] 23-2: _Arquitetura de Software - Camada de Controller e Service_
-- [ ] 23-3: _Arquitetura Web - Rest e Restful_
-- [ ] 23-4: _Arquitetura de Software - Testando as Camadas_
-- [ ] 23-5: _[Projeto - Store Manager]()_
+- [X] 23-1: _Introdução - Arquitetura de Software_
+- [X] 23-1: _Arquitetura de Software - Camada de Model_
+- [X] 23-2: _Arquitetura de Software - Camada de Controller e Service_
+- [X] 23-3: _Arquitetura Web - Rest e Restful_
+- [X] 23-4: _Arquitetura de Software - Testando as Camadas_
+- [X] 23-5: _[Projeto - Store Manager]()_
 
 ##### Bloco 24: Node.js: ORM e Autenticação
 
-- [ ] 24-1: _Introdução - Node.js: ORM e Autenticação_
-- [ ] 24-1: _ORM - Interface da aplicação com o banco de dados_
-- [ ] 24-2: _ORM - Associations_
-- [ ] 24-3: _JWT - (JSON Web Token)_
-- [ ] 24-4: _Testando APIs com Testes de Integração_
-- [ ] 24-5: _[Projeto - API de Blogs]()_
+- [X] 24-1: _Introdução - Node.js: ORM e Autenticação_
+- [X] 24-1: _ORM - Interface da aplicação com o banco de dados_
+- [X] 24-2: _ORM - Associations_
+- [X] 24-3: _JWT - (JSON Web Token)_
+- [X] 24-4: _Testando APIs com Testes de Integração_
+- [X] 24-5: _[Projeto - API de Blogs]()_
 
-##### Bloco 25: Deployment
+##### Bloco 25: MasterClass: Implementação de aplicações na nuvem
 
-- [ ] 25-1: _Introdução - Deploy_
-- [ ] 25-1: _Infraestrutura - Deploy com Heroku_
-- [ ] 25-2: _Deploy Docker & Heroku_
-- [ ] 25-3: _[Projeto - Stranger Things]()_
+- [X] 25-1: _Infraestrutura - Deploy com Railway_
 
 ##### Bloco 26: TypeScript
 
