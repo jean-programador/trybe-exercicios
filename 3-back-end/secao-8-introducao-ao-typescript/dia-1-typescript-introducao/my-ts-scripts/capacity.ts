@@ -5,8 +5,8 @@ function convertCapacity(
   baseUnit: string,
   convertUnit: string,
 ): number {
-  const indexBaseUnit = units.indexOf(baseUnit);
-  const indexConvertUnit = units.indexOf(convertUnit);
+  const indexBaseUnit = unitsCapacity.indexOf(baseUnit);
+  const indexConvertUnit = unitsCapacity.indexOf(convertUnit);
   const expoent = indexConvertUnit - indexBaseUnit;
 
   return value * Math.pow(10, expoent);
