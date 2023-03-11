@@ -80,4 +80,4 @@ console.log('\nCALCULA A ÁREA DE CÍRCULO COM:');
 
 console.log(`- r = 25cm: ${Ex.getCircleArea(25)}`);
 console.log(`- r = 100cm: ${Ex.getCircleArea(100)}`);
-console.log(`- r = 12,5cm: ${Ex.getCircleArea(12,5)}`);
+console.log(`- r = 12,5cm: ${Ex.getCircleArea(12.5)}`);
