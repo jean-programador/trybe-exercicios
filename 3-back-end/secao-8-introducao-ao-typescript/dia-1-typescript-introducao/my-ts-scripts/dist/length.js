@@ -157,12 +157,3 @@ function convertToMilimeter(value, baseUnit) {
             return value;
     }
 }
-const units = ['km', 'hm', 'dam', 'm', 'dm', 'cm', 'mm'];
-function convert2(value, fromUnit, toUnit) {
-    const fromIndex = units.indexOf(fromUnit); // pegamos o index da unidade base no array
-    const toIndex = units.indexOf(toUnit); // pegamos o index da unidade para a conversão
-    const exponent = toIndex - fromIndex; // calculamos o expoente a partir da diferença dos index
-    return value * Math.pow(10, exponent);
-}
-console.log(convert(10, 'dam', 'cm'));
-console.log(convert2(10, 'dam', 'cm'));
