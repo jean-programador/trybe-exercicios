@@ -37,8 +37,12 @@ export function getLosangleArea(largerDiagonal: number, smallerDiagonal: number)
 // A área do trapézio é dada pelo produto da altura (h) com a soma da base maior (B) e a base menor (b) dividido por dois.
 // A = [(B + b) * h] / 2
 
-export function getTrapezioArea(hight: number, largerBase: number, smallerBase: number): number {
-    return ((largerBase + smallerBase) * hight) / 2
+export function getTrapezioArea(
+  largerBase: number,
+  smallerBase: number,
+  hight: number
+  ): number {
+  return ((largerBase + smallerBase) * hight) / 2;
 }
 
 // Crie uma nova função para calcular a área de um círculo.
