@@ -40,3 +40,12 @@ export function getLosangleArea(largerDiagonal: number, smallerDiagonal: number)
 export function getTrapezioArea(hight: number, largerBase: number, smallerBase: number): number {
     return ((largerBase + smallerBase) * hight) / 2
 }
+
+// Crie uma nova função para calcular a área de um círculo.
+// A área do círculo de raio r é calculada multiplicando o raio ao quadrado pelo número irracional ℼ (em geral utilizamos ℼ = 3,14).
+// A = ℼ * r².
+// Dica: você pode acessar o valor de ℼ utilizando o módulo nativo Math.PI.
+
+export function getCircleArea(r: number): number {
+  return (Math.PI * (r ** 2))
+}
