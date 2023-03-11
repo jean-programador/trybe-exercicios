@@ -24,3 +24,11 @@ export function triangleCheck(
   const checkSideC = sideA - sideB < sideC && sideC < sideA + sideB;
   return checkSideA && checkSideB && checkSideC;
 }
+
+// Crie uma nova função para calcular a área de um losango. 
+// A área do losango é dada pelo resultado da multiplicação da diagonal maior (D) pela diagonal menor (d) dividido por dois. 
+// A = (D * d) / 2
+
+export function getLosangleArea(largerDiagonal: number, smallerDiagonal: number): number {
+  return (largerDiagonal * smallerDiagonal) / 2
+}
