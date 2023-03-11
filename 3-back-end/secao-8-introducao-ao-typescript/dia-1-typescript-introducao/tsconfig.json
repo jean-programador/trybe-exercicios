@@ -1,15 +1,15 @@
+// ./tsconfig.json
 {
-  "$schema": "https://json.schemastore.org/tsconfig",
-  "display": "Node 18",
-  "extends": "@tsconfig/node18/tsconfig.json",
+  "extends": "@tsconfig/node16/tsconfig.json",
   "compilerOptions": {
-    "lib": ["es2022"],
+    "target": "es2016",
     "module": "commonjs",
-    "target": "es2022",
-    "strict": true,
+    "rootDir": "./",
+    "outDir": "./dist",
+    "preserveConstEnums": true,
     "esModuleInterop": true,
-    "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
-    "moduleResolution": "node"
+    "strict": true,
+    "skipLibCheck": true
   }
 }
