@@ -32,3 +32,11 @@ export function triangleCheck(
 export function getLosangleArea(largerDiagonal: number, smallerDiagonal: number): number {
   return (largerDiagonal * smallerDiagonal) / 2
 }
+
+// Crie uma nova função para calcular a área de um trapézio.
+// A área do trapézio é dada pelo produto da altura (h) com a soma da base maior (B) e a base menor (b) dividido por dois.
+// A = [(B + b) * h] / 2
+
+export function getTrapezioArea(hight: number, largerBase: number, smallerBase: number): number {
+    return ((largerBase + smallerBase) * hight) / 2
+}
