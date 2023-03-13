@@ -8,7 +8,7 @@ function convertMass(value: number, baseUnit: string, convertUnit: string): numb
   return value * Math.pow(10, expoent)
 }
 
-(function execMass(): void {
+function execMass(): void {
   console.log('\nBEM VINDO AO CONVERSOR DE UNIDADE MEDIDA DE MASSA');
 
   console.log('\n--------------------------------------------------');
@@ -28,4 +28,6 @@ function convertMass(value: number, baseUnit: string, convertUnit: string): numb
 
   const result = convertMass(value, baseUnit, convertUnit);
   console.log(`\n${value}${baseUnit} é igual a ${result}${convertUnit}`);
-})();
+};
+
+execMass();

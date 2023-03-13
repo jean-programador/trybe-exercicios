@@ -10,7 +10,7 @@ const expoent = indexConvertUnit - indexBaseUnit;
 return value * Math.pow(10, expoent);
 }
 
-(function execLength(): void {
+function execLength(): void {
   console.log('\nBEM VINDO AO CONVERSOR DE UNIDADE MEDIDA DE COMPRIMENTO');
   
   console.log('\n--------------------------------------------------');
@@ -27,4 +27,6 @@ return value * Math.pow(10, expoent);
   const result = convertLength(value, baseUnit, convertUnit)
   console.log(`\n${value}${baseUnit} é igual a ${result}${convertUnit}`);
   
-})()
+};
+
+execLength()

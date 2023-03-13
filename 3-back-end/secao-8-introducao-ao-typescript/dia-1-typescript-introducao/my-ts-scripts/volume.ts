@@ -12,7 +12,7 @@ function convertVolum(
   return value * Math.pow(1000, expoent);
 }
 
-(function execArea(): void {
+function execVolum(): void {
   console.log('\nBEM VINDO AO CONVERSOR DE UNIDADE MEDIDA DE VOLUME');
 
   console.log('\n--------------------------------------------------');
@@ -32,4 +32,6 @@ function convertVolum(
 
   const result = convertVolum(value, baseUnit, convertUnit);
   console.log(`\n${value}${baseUnit} é igual a ${result}${convertUnit}`);
-})();
+};
+
+execVolum()

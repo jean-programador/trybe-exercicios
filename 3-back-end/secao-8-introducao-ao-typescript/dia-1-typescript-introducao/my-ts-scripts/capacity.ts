@@ -12,7 +12,7 @@ function convertCapacity(
   return value * Math.pow(10, expoent);
 }
 
-(function execCapacity(): void {
+function execCapacity(): void {
   console.log('\nBEM VINDO AO CONVERSOR DE UNIDADE MEDIDA DE CAPACIDADE');
 
   console.log('\n--------------------------------------------------');
@@ -32,4 +32,6 @@ function convertCapacity(
 
   const result = convertCapacity(value, baseUnit, convertUnit);
   console.log(`\n${value}${baseUnit} é igual a ${result}${convertUnit}`);
-})();
+};
+
+execCapacity()

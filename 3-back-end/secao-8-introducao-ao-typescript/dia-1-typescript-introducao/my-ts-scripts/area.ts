@@ -12,7 +12,7 @@ function convertArea(
   return value * Math.pow(100, expoent);
 }
 
-(function execArea(): void {
+function execArea(): void {
   console.log('\nBEM VINDO AO CONVERSOR DE UNIDADE MEDIDA DE ÁREA');
 
   console.log('\n--------------------------------------------------');
@@ -32,4 +32,6 @@ function convertArea(
 
   const result = convertArea(value, baseUnit, convertUnit);
   console.log(`\n${value}${baseUnit} é igual a ${result}${convertUnit}`);
-})();
+};
+
+execArea();
