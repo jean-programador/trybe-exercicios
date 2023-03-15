@@ -6,16 +6,17 @@ function convertMass(value, baseUnit, convertUnit) {
     const expoent = indexConvertUnit - indexBaseUnit;
     return value * Math.pow(10, expoent);
 }
-(function execMass() {
+function execMass() {
+    const readLine = require('readline-sync');
     console.log('\nBEM VINDO AO CONVERSOR DE UNIDADE MEDIDA DE MASSA');
     console.log('\n--------------------------------------------------');
-    readLine.setDefaultOptions({
-        limit: unitsMass,
-    });
-    console.log('\nOpções disponíveis: kg, hg, dag, g, dg, cg, mg');
     const value = readLine.questionInt('\nDigite o valor a ser convertido: ');
-    const baseUnit = readLine.question('\nDigite a unidade base: ');
-    const convertUnit = readLine.question('\nDigite a unidade para que deseja converter: ');
-    const result = convertMass(value, baseUnit, convertUnit);
-    console.log(`\n${value}${baseUnit} é igual a ${result}${convertUnit}`);
-})();
+    const indexBase = readLine.keyInSelect(unitsMass, '\nEscolha a unidade base: ');
+    const indexConvert = readLine.keyInSelect(unitsMass, '\nEscolha a unidade para que deseja converter: ');
+    const result = convertMass(value, unitsMass[indexBase], unitsMass[indexConvert]);
+    console.log(`\n${value}${unitsMass[indexBase]} é igual a ${result}${unitsMass[indexConvert]}`);
+}
+;
+module.exports = {
+    execMass,
+};

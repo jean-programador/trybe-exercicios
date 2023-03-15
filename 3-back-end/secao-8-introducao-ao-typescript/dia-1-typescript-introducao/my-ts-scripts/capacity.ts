@@ -13,25 +13,34 @@ function convertCapacity(
 }
 
 function execCapacity(): void {
+  const readLine = require('readline-sync');
+
   console.log('\nBEM VINDO AO CONVERSOR DE UNIDADE MEDIDA DE CAPACIDADE');
 
   console.log('\n--------------------------------------------------');
 
-  readLine.setDefaultOptions({
-    limit: unitsCapacity,
-  });
-  console.log('\nOpções disponíveis: kl, hl, dal, l, dl, cl, ml');
+   const value: number = readLine.questionInt(
+     '\nDigite o valor a ser convertido: ',
+   );
+   const indexBase: number = readLine.keyInSelect(
+     unitsCapacity,
+     '\nEscolha a unidade base: ',
+   );
+   const indexConvert: number = readLine.keyInSelect(
+     unitsCapacity,
+     '\nEscolha a unidade para que deseja converter: ',
+   );
 
-  const value: number = readLine.questionInt(
-    '\nDigite o valor a ser convertido: ',
-  );
-  const baseUnit: string = readLine.question('\nDigite a unidade base: ');
-  const convertUnit: string = readLine.question(
-    '\nDigite a unidade para que deseja converter: ',
-  );
-
-  const result = convertCapacity(value, baseUnit, convertUnit);
-  console.log(`\n${value}${baseUnit} é igual a ${result}${convertUnit}`);
+   const result = convertCapacity(
+     value,
+     unitsCapacity[indexBase],
+     unitsCapacity[indexConvert],
+   );
+   console.log(
+     `\n${value}${unitsCapacity[indexBase]} é igual a ${result}${unitsCapacity[indexConvert]}`,
+   );
 };
 
-execCapacity()
+module.exports = {
+  execCapacity,
+}

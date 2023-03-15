@@ -13,25 +13,34 @@ function convertVolum(
 }
 
 function execVolum(): void {
+  const readLine = require('readline-sync');
+
   console.log('\nBEM VINDO AO CONVERSOR DE UNIDADE MEDIDA DE VOLUME');
 
   console.log('\n--------------------------------------------------');
 
-  readLine.setDefaultOptions({
-    limit: unitsVolum,
-  });
-  console.log('\nOpções disponíveis: km³, hm³, dam³, m³, dm³, cm³, mm³');
+    const value: number = readLine.questionInt(
+      '\nDigite o valor a ser convertido: ',
+    );
+    const indexBase: number = readLine.keyInSelect(
+      unitsVolum,
+      '\nEscolha a unidade base: ',
+    );
+    const indexConvert: number = readLine.keyInSelect(
+      unitsVolum,
+      '\nEscolha a unidade para que deseja converter: ',
+    );
 
-  const value: number = readLine.questionInt(
-    '\nDigite o valor a ser convertido: ',
-  );
-  const baseUnit: string = readLine.question('\nDigite a unidade base: ');
-  const convertUnit: string = readLine.question(
-    '\nDigite a unidade para que deseja converter: ',
-  );
-
-  const result = convertVolum(value, baseUnit, convertUnit);
-  console.log(`\n${value}${baseUnit} é igual a ${result}${convertUnit}`);
+    const result = convertVolum(
+      value,
+      unitsVolum[indexBase],
+      unitsVolum[indexConvert],
+    );
+    console.log(
+      `\n${value}${unitsVolum[indexBase]} é igual a ${result}${unitsVolum[indexConvert]}`,
+    );
 };
 
-execVolum()
+module.exports = {
+  execVolum,
+}

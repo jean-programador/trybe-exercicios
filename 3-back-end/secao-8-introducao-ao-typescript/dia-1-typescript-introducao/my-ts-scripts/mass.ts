@@ -9,25 +9,34 @@ function convertMass(value: number, baseUnit: string, convertUnit: string): numb
 }
 
 function execMass(): void {
+  const readLine = require('readline-sync');
+
   console.log('\nBEM VINDO AO CONVERSOR DE UNIDADE MEDIDA DE MASSA');
 
   console.log('\n--------------------------------------------------');
 
-  readLine.setDefaultOptions({
-    limit: unitsMass,
-  });
-  console.log('\nOpções disponíveis: kg, hg, dag, g, dg, cg, mg');
+    const value: number = readLine.questionInt(
+      '\nDigite o valor a ser convertido: ',
+    );
+    const indexBase: number = readLine.keyInSelect(
+      unitsMass,
+      '\nEscolha a unidade base: ',
+    );
+    const indexConvert: number = readLine.keyInSelect(
+      unitsMass,
+      '\nEscolha a unidade para que deseja converter: ',
+    );
 
-  const value: number = readLine.questionInt(
-    '\nDigite o valor a ser convertido: ',
-  );
-  const baseUnit: string = readLine.question('\nDigite a unidade base: ');
-  const convertUnit: string = readLine.question(
-    '\nDigite a unidade para que deseja converter: ',
-  );
-
-  const result = convertMass(value, baseUnit, convertUnit);
-  console.log(`\n${value}${baseUnit} é igual a ${result}${convertUnit}`);
+    const result = convertMass(
+      value,
+      unitsMass[indexBase],
+      unitsMass[indexConvert],
+    );
+    console.log(
+      `\n${value}${unitsMass[indexBase]} é igual a ${result}${unitsMass[indexConvert]}`,
+    );
 };
 
-execMass();
+module.exports = {
+  execMass,
+}

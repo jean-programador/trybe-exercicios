@@ -1,28 +1,42 @@
-console.log('\nOpções disponíveis: km², hm², dam², m², dm², cm², mm²');
-const options = ['comprimento', 'massa', 'area', 'capacidade', 'volume'];
-readLine.setDefaultOptions = ({
-  limit: options,
-});
+const length = require('./length');
+const area = require('./area');
+const capacity = require('./capacity');
+const mass = require('./mass');
+const volum = require('./volume');
 
-const type = readLine.question("Selecione o tipo de conversão que deseja realizar:");
-console.log('\nOpções disponíveis: comprimento, massa, area, capacidade, volume');
+const options: Array<string> = [
+  'comprimento',
+  'massa',
+  'area',
+  'capacidade',
+  'volume',
+];
 
-switch (type) {
-  case 'comprimento':
-    execLength();
-    break;
-  case 'massa':
-    execMass();
-    break;
-  case 'area':
-    execArea();
-    break;
-  case 'capacidade':
-    execCapacity();
-    break;
-  case 'volume':
-    execVolum();
-    break;
-  default:
-    break;
-}
+(function startup() {
+  const readLine = require('readline-sync');
+
+  const index = readLine.keyInSelect(
+    options,
+    'Selecione o tipo de conversao que deseja realizar',
+  );
+
+  switch (options[index]) {
+    case 'comprimento':
+      length.execLength();
+      break;
+    case 'massa':
+      mass.execMass();
+      break;
+    case 'area':
+      area.execArea();
+      break;
+    case 'capacidade':
+      capacity.execCapacity();
+      break;
+    case 'volume':
+      volum.execVolum();
+      break;
+    default:
+      break;
+  }
+})();
