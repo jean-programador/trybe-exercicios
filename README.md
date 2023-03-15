@@ -193,7 +193,7 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online e aborda 
 - [X] 24-2: _ORM - Associations_
 - [X] 24-3: _JWT - (JSON Web Token)_
 - [X] 24-4: _Testando APIs com Testes de Integração_
-- [X] 24-5: _[Projeto - API de Blogs]()_
+- [X] 24-5: _[Projeto - API de Blogs](https://github.com/JeanCarlos-SC/blogs-api)_
 
 ##### Bloco 25: MasterClass: Implementação de aplicações na nuvem
 
