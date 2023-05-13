@@ -1,0 +1,13 @@
+{
+  "name": "dia-4-introducao-principios-s-o-d",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha -r ts-node/register ./tests/**/*.{test,spec}.[t,j]s",
+    "lint": "eslint -c .eslintrc.json src/**/*.[t,s]s"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
