@@ -59,6 +59,7 @@ function setApproved(students: Array<Student>): void {
 }
 
 export {
+  getLetterGrades,
   percentageGradesIntoLetters,
   approvedStudents,
   updateApprovalData,
