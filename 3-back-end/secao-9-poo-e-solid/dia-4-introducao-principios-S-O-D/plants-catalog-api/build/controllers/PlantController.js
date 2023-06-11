@@ -1,12 +1,8 @@
 "use strict";
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
 Object.defineProperty(exports, "__esModule", { value: true });
-const PlantService_1 = __importDefault(require("../services/PlantService"));
 class PlantController {
-    constructor() {
-        this.service = new PlantService_1.default();
+    constructor(plantService) {
+        this.service = plantService;
     }
     async getAll(_req, res, next) {
         try {
@@ -17,10 +13,43 @@ class PlantController {
             next(error);
         }
     }
+    async getById(req, res, next) {
+        try {
+            const plant = await this.service.getById(req.params.id);
+            if (plant)
+                return res.status(200).json(plant);
+            return res.status(404).json({ message: 'Plant not found' });
+        }
+        catch (error) {
+            next(error);
+        }
+    }
+    async update(req, res, next) {
+        try {
+            const plantUpdated = await this.service.update(req.body);
+            if (plantUpdated)
+                return res.status(201).json(plantUpdated);
+            return res.status(404).json({ message: 'Plant not found' });
+        }
+        catch (error) {
+            next(error);
+        }
+    }
     async create(req, res, next) {
         try {
             const plant = await this.service.create(req.body);
             return res.status(201).json(plant);
+        }
+        catch (error) {
+            next(error);
+        }
+    }
+    async delete(req, res, next) {
+        try {
+            const removed = await this.service.removeById(req.params.id);
+            if (removed)
+                return res.status(204).send();
+            return res.status(404).json({ message: 'Plant not found' });
         }
         catch (error) {
             next(error);

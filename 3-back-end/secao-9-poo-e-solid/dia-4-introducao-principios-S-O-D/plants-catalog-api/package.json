@@ -14,7 +14,7 @@
     "solid",
     "refactor"
   ],
-  "author": "Pessoa Estudante",
+  "author": "Jean Carlos",
   "license": "ISC",
   "devDependencies": {
     "@types/express": "4.17.14",
