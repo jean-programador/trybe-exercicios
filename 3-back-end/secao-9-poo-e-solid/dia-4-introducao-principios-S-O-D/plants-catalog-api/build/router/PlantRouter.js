@@ -1,0 +1,21 @@
+"use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = require("express");
+const PlantController_1 = __importDefault(require("../controllers/PlantController"));
+const PlantService_1 = __importDefault(require("../services/PlantService"));
+const PlantModel_1 = __importDefault(require("../models/PlantModel"));
+const OpsModel_1 = __importDefault(require("../models/OpsModel"));
+const opsModel = new OpsModel_1.default();
+const plantModel = new PlantModel_1.default(opsModel);
+const plantService = new PlantService_1.default(plantModel);
+const plantController = new PlantController_1.default(plantService);
+const plantRouter = (0, express_1.Router)();
+plantRouter.get('/', (req, res, next) => plantController.getAll(req, res, next));
+plantRouter.get('/:id', (req, res, next) => plantController.getById(req, res, next));
+plantRouter.post('/', (req, res, next) => plantController.create(req, res, next));
+plantRouter.put('/', (req, res, next) => plantController.update(req, res, next));
+plantRouter.delete('/:id', (req, res, next) => plantController.delete(req, res, next));
+exports.default = plantRouter;
